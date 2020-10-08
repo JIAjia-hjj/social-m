@@ -1,0 +1,146 @@
+@import "./normalize.css";
+/*:root->获取根元素html*/
+:root{
+
+  --color-text: #333;
+  /*文字高亮的时候的颜色*/
+  --color-high-text: #ff5777;
+  /*整体的背景颜色*/
+  --color-tint: #ff8198;
+  --color-background:#F5F5F9;
+  --font-size: 14px;
+  /*--line-height: 1.5;*/
+  /*定义变量  在其他css中就可以使用这个变量*/
+  /*--large-size:50px;*/
+}
+*,
+*::before,
+*::after{
+  /*font-size: var(--large-size);*/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "PingFang SC","苹方",Arial,sans-serif ;
+  /*禁止用户鼠标咋页面上选中文字/图片等*/
+  user-select: none;
+  /*webkit是苹果浏览器引擎，tap点击，highlight1背景高亮，color
+  颜色，颜色用数值调节*/
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  width: 100vw;
+}
+a{
+  color: var(--color-text);
+  text-decoration: none;
+}
+.clear-fix::after{
+  clear: both;
+  content:'';
+  display: block;
+  width: 0;
+  height: 0;
+ visibility: hidden;
+}
+.clear-fix{
+  zoom: 1;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+img{
+  display: block;
+}
+::-webkit-scrollbar {
+  display:none
+}
+
+
+
+
+
+
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  /*-webkit-text-size-adjust: 100%;*/
+  /*-ms-text-size-adjust: 100%;*/
+  -webkit-overflow-scrolling: touch;
+   height: 100vh;
+
+  -webkit-text-size-adjust:none;
+  -ms-text-size-adjust: none;
+}
+body{
+  font-size: 14px;
+  font-family:"Microsoft YaHei",sans-serif;
+}
+a{
+  text-decoration: none;
+  /*color: #fff;*/
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+input,textarea,button{
+  border: none;
+  outline: none;
+  resize: none;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: 'Microsoft YaHei';
+  background-color: transparent;
+
+}
+ol, ul, dl, dt, dd {
+  list-style: none;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin-top:0;
+  margin-bottom:0;
+  font-size: 100%;
+  font-family: 'Microsoft YaHei';
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+em, i {
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+p {
+  word-wrap: break-word;
+  margin: 0;
+
+}
+.oneline{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.p_re{
+  position: relative;
+}
+.p_ab{
+  position: absolute;
+}
