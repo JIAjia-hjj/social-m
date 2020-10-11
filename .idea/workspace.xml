@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8df14be0-13ed-4212-b3a2-515ae1a4a097" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/network/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/network/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/network/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/network/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/content/write.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/content/write.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/functionalPages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/functionalPages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/functionalPages/search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/functionalPages/search.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/login-register/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/login-register/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/login-register/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/login-register/register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/mypage/backups.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/mypage/backups.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/mypage/mypage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/mypage/mypage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/mypage/proinfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/mypage/proinfo.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +57,7 @@
       <workItem from="1602136329918" duration="13152000" />
       <workItem from="1602252235492" duration="7118000" />
       <workItem from="1602332666629" duration="13073000" />
-      <workItem from="1602381968098" duration="1920000" />
+      <workItem from="1602381968098" duration="2519000" />
     </task>
     <servers />
   </component>
