@@ -1,19 +1,16 @@
 <template>
 
   <div class="proinfo">
-  
     <div class="header fixed"> 
       <h4>导出备份</h4>
       <router-link to="/mypage" class="return">
         <span class="iconfont">&#xe616;</span>
         <span>返回</span>
-      </router-link> 
-      
+      </router-link>
     </div>
      <div class="body fixed">
          <label>选择导出时间段</label>
-         <input type="text">至 <input type="text"> 
-
+         <input type="text">至 <input type="text">
      </div>  
   </div>
 </template>

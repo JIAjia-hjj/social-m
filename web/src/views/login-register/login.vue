@@ -1,7 +1,7 @@
 <template>
   <div class="login">
       <div class="login_tip1">
-        <img alt=logo" src="~@/assets/images/smile.png" style="width: 24px">
+        <img alt="logo" src="~@/assets/images/smile.png" style="width: 24px">
         <p>Hi~</p>
       </div>
       <p class="login_tip2">欢迎来到无关注社交app</p>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import {submitLogin} from 'network/login'
+import {login} from 'network/api'
 
 export default {
   name: "login",
@@ -41,7 +41,7 @@ export default {
       }
       let url='/api/user/login'
       let data={'tel': this.logTel,'password': this.logPwd}
-      submitLogin(data).then((res)=>{
+      login(data).then((res)=>{
         if(res.code=="000"){
           this.$store.commit('setTel',this.logTel);
           this.$router.push({path:'/index',query:{tel:this.logTel}})

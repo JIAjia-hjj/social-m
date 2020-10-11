@@ -36,8 +36,8 @@
   </div>
 </template>
 <script>
-  import FooterNav from "../../components/footer.vue";
-
+  import FooterNav from "components/footer.vue";
+  import {uploadImg,getUserInfo,showPhotoimg} from 'network/api'
   export default {
     name: "index",
     components: {
@@ -70,6 +70,7 @@
         let form = new FormData()
         // 利用Formdata对象，可以实现异步上传图片
         form.append('file', photoimg) //通过append向form对象添加数据
+
         this.$http.post('/api/upload/uploadPhoto', form, {
           headers: {'Content-Type': 'multipart/form-data'}
         }).then((res) => {
@@ -92,24 +93,23 @@
         })
       },
       showPhotoimg() {
-        this.$http.post('/api/upload/showPhotoimg', {'tel': this.$store.state.tel}).then((res) => {
+        showPhotoimg(data).then((res)=>{
+          if (res.code!="000") {
+            return
+          }
           // this.photoimgurl="http://127.0.0.1:3000/photoimgs/"+res.body['result'][0]['photoimgurl']
           this.photoimgurl = "public/photoimgs/" + res.body['result'][0]['photoimgurl']
           document.getElementsByTagName("img")[0].src = this.photoimgurl
-        }, (res) => {
-          alert(res.status)
         })
       },
       getInfo() {
-        let url = '/api/mypage/getInfo'
         let data = {'tel': this.$store.state.tel}
-        this.$http.post(url, data).then((res) => {
-          if (res.body['code'] == '000') {
-            this.username = res.body['result'][0]['username']
-            this.signature = res.body['result'][0]['signature']
+        getUserInfo(data).then((res)=>{
+          if (res.code!="000") {
+           return
           }
-        }, (res) => {
-          alert(res.status)
+          this.username = res.result[0]['username']
+          this.signature = res.result[0]['signature']
         })
       },
     },

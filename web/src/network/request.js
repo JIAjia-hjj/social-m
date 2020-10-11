@@ -1,29 +1,35 @@
 import axios from 'axios'
 import Qs from 'qs'
-export  function request(config) {
-   const instance=axios.create({
-     headers:{'Content-Type': 'application/x-www-form-urlencoded'},
-     // baseURL:'http://127.0.0.1:3000/',
-     timeout:50000,
-     transformRequest: [function (data) {
-       data = Qs.stringify(data);
-       return data;
-     }],
+export  const request=(method,url,data)=> {
+  method = method ? method : 'GET';
+  let config={
+    method,
+    url,
+    [method=='GET'?'params':'data']:data||{}
+  };
+  const instance=axios.create({
+    headers:{'Content-Type': 'application/x-www-form-urlencoded'},
+    // baseURL:'http://api.xxfgo_dev.com/',
+    timeout:50000,
+    transformRequest: [function (data) {//axios传递的请求参数是json格式，而后端接口要求是formData
+      data = Qs.stringify(data);
+      return data;
+    }],
+  });
+  instance.interceptors.request.use(config=>{
+    return config
+  },error => {
+    console.log(error);
+  });
 
-   });
-   instance.interceptors.request.use(config=>{
-     return config
-   },error => {
-     console.log(error);
-   });
-
-   instance.interceptors.response.use(res=>{
-     return res.data
-   },error=>{
-     console.log(error)
-   });
+  instance.interceptors.response.use(res=>{
+    return res.data
+  },error=>{
+    console.log(error)
+  });
   return instance(config)
 }
+
 
 
 axios.jsonp = (url,data)=>{
